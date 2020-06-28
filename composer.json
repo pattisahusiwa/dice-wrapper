@@ -20,6 +20,7 @@
         "sort-packages": true
     },
     "require": {
-        "level-2/dice": "^4.0"
+        "level-2/dice": "^4.0",
+        "psr/container": "^1.0"
     }
 }
