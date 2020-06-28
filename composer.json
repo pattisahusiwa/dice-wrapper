@@ -19,5 +19,7 @@
         "preferred-install": "dist",
         "sort-packages": true
     },
-    "require": {}
+    "require": {
+        "level-2/dice": "^4.0"
+    }
 }
