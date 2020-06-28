@@ -1,0 +1,23 @@
+{
+    "name": "pattisahusiwa/dice-wrapper",
+    "description": "",
+    "type": "library",
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "Asis Pattisahusiwa",
+            "email": "asis.pattisahusiwa@gmail.com"
+        }
+    ],
+    "homepage": "https://github.com/pattisahusiwa/dice-wrapper",
+    "support": {
+        "issues": "https://github.com/pattisahusiwa/dice-wrapper/issues"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "require": {}
+}
