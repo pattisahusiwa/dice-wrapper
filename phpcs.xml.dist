@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="phrozer">
+  <description>phrozer coding standard</description>
+
+  <config name="testVersion" value="7.0.0"/>
+
+  <arg name="colors"/>
+  <arg name="parallel" value="8"/>
+  <arg value="psv"/>
+  <arg name="extensions" value="php"/>
+
+  <file>./src/</file>
+  <file>./tests/</file>
+
+  <exclude-pattern>./vendor/*</exclude-pattern>
+
+  <!-- Don't hide tokenizer exceptions -->
+  <rule ref="Internal.Tokenizer.Exception">
+    <type>error</type>
+  </rule>
+
+  <rule ref="PSR12"/>
+
+  <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
+    <exclude-pattern>./tests/*</exclude-pattern>
+  </rule>
+</ruleset>
