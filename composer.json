@@ -19,7 +19,13 @@
         "preferred-install": "dist",
         "sort-packages": true
     },
+    "autoload": {
+        "psr-4": {
+            "Dice\\": "src/"
+        }
+    },
     "require": {
+        "php": ">=5.3.0",
         "level-2/dice": "^4.0",
         "psr/container": "^1.0"
     }
