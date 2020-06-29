@@ -1,0 +1,12 @@
+{
+    "$dice": {
+        "instanceOf": "\\Dice\\Dice"
+    },
+    "ReflectionClass": {
+        "constructParams": [
+            {
+                "Dice::INSTANCE": "$dice"
+            }
+        ]
+    }
+}
