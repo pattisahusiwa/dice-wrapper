@@ -1,6 +1,13 @@
 {
     "name": "pattisahusiwa/dice-wrapper",
     "description": "PSR-11 compliant for Level-2/Dice PHP dependency injection container",
+    "keywords": [
+        "psr-11",
+        "psr-11-compliant",
+        "dependency-injection",
+        "container",
+        "container-interop"
+    ],
     "type": "library",
     "license": "BSD-2-Clause",
     "authors": [
