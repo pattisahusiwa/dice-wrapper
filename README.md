@@ -36,6 +36,19 @@ if ($diceWrapper->has('class_name')) {
 ## Limitations
 You can't use `DICE::SELF` in order to get `DiceWrapper` instance. `DICE::SELF` will return `Dice` instance.
 
+Current workaround is by adding `Psr\Container\ContainerInterface` in your class constructor. The injector and the injected `DiceWrapper` are the same object. However, you must carefully implement this into your projects as it can turn into a **Service Locator**.
+````php
+<?php
+
+use Psr\Container\ContainerInterface;
+
+final class ExampleClass
+{
+    public function __construct(ContainerInterface $dic)
+    {
+    }
+}
+````
 
 ## Contributing
 All form of contributions are welcome. You can [report issues](https://github.com/pattisahusiwa/dice-wrapper/issues), fork the repo and submit pull request.

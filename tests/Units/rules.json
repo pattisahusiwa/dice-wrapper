@@ -1,11 +1,18 @@
 {
-    "$dice": {
-        "instanceOf": "\\Dice\\Dice"
+    "$check": {
+        "instanceOf": "Dice\\Test\\CheckConstructorArgs"
     },
     "ReflectionClass": {
         "constructParams": [
             {
-                "Dice::INSTANCE": "$dice"
+                "Dice::INSTANCE": "$check"
+            }
+        ]
+    },
+    "Dice\\Test\\CheckConstructorArgs": {
+        "constructParams": [
+            {
+                "Dice::INSTANCE": "Dice::SELF"
             }
         ]
     }

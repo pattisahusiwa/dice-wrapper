@@ -12,7 +12,8 @@ final class DiceWrapper implements ContainerInterface
 
     public function __construct(Dice $dice)
     {
-        $this->dice = $dice;
+        $rule = ['substitutions' => [ContainerInterface::class => $this]];
+        $this->dice = $dice->addRule('*', $rule);
     }
 
     public function get($id)

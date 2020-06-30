@@ -2,6 +2,7 @@
 
 use Dice\Dice;
 use Dice\DiceWrapper;
+use Dice\Test\CheckConstructorArgs;
 use PHPUnit\Framework\TestCase;
 
 final class ConfigTest extends TestCase
@@ -27,6 +28,18 @@ final class ConfigTest extends TestCase
         $this->assertInstanceOf(ReflectionClass::class, $obj);
     }
 
+    public function testCreateFromVariable()
+    {
+        $obj = $this->dic->get('$check');
+        $this->assertInstanceOf(CheckConstructorArgs::class, $obj);
+    }
+
+    public function testCreateOverrideRule()
+    {
+        $obj = $this->dic->get(CheckConstructorArgs::class);
+        $this->assertInstanceOf(CheckConstructorArgs::class, $obj);
+    }
+
     public function testHasClass()
     {
         $this->assertTrue($this->dic->has(ReflectionClass::class));
@@ -34,7 +47,7 @@ final class ConfigTest extends TestCase
 
     public function testHasClassVariable()
     {
-        $this->assertTrue($this->dic->has('$dice'));
+        $this->assertTrue($this->dic->has('$check'));
     }
 
     public function testHasGlobalRule()
