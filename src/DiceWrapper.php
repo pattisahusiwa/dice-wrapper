@@ -27,7 +27,8 @@ final class DiceWrapper implements ContainerInterface
         try {
             return $this->dice->create($id);
         } catch (Throwable $th) {
-            throw new ContainerException($th->getMessage(), $th->getCode(), $th);
+            $code = is_int($th->getCode()) ? $th->getCode() : 1;
+            throw new ContainerException($th->getMessage(), $code, $th);
         }
     }
 

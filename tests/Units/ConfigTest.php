@@ -2,9 +2,11 @@
 
 declare(strict_types=1);
 
+use Dice\ContainerException;
 use Dice\Dice;
 use Dice\DiceWrapper;
 use Dice\Test\CheckConstructorArgs;
+use Dice\Test\DicePdoDriver;
 use PHPUnit\Framework\TestCase;
 
 final class ConfigTest extends TestCase
@@ -12,14 +14,14 @@ final class ConfigTest extends TestCase
     /** @var DiceWrapper */
     private $dic;
 
-    public function setup()
+    protected function setup()
     {
         $dice = new Dice();
         $dice = $dice->addRules(__DIR__ . '/rules.json');
         $this->dic = new DiceWrapper($dice);
     }
 
-    public function tearDown()
+    protected function tearDown()
     {
         $this->dic = null;
     }
@@ -55,5 +57,13 @@ final class ConfigTest extends TestCase
     public function testHasGlobalRule()
     {
         $this->assertFalse($this->dic->has('*'));
+    }
+
+    public function testHandlePdoException()
+    {
+        $this->expectException(ContainerException::class);
+        $this->expectExceptionCode(1);
+
+        $this->dic->get(DicePdoDriver::class);
     }
 }

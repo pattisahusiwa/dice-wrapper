@@ -15,5 +15,10 @@
                 "Dice::INSTANCE": "Dice::SELF"
             }
         ]
+    },
+    "Dice\\Test\\DicePdoDriver": {
+        "constructParams": [
+            "sqlite::memory:"
+        ]
     }
 }
