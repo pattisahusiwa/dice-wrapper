@@ -36,15 +36,9 @@
             "Dice\\Test\\": "tests/data/"
         }
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/pts-contrib/Dice.git"
-        }
-    ],
     "require": {
         "php": ">=7.0.0",
-        "level-2/dice": "dev-global-rule as 4.0.2",
+        "level-2/dice": "^4.0",
         "psr/container": "^1.0"
     },
     "require-dev": {
