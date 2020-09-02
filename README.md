@@ -1,3 +1,6 @@
+**This repository is deprecated. Please use [pattisahusiwa/dicontainer](https://github.com/pattisahusiwa/dicontainer)**
+
+
 # Dice wrapper - PHP Dependency Injection Container
 
 [![License](https://poser.pugx.org/pattisahusiwa/dice-wrapper/license)](//packagist.org/packages/pattisahusiwa/dice-wrapper)
